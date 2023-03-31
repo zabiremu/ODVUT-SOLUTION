@@ -64,3 +64,141 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+1.Please migrate database with seed files
+=======
+php artisan migrate --seed
+
+
+2.user login credentials
+======
+Api:http://127.0.0.1:8000/api/auth/login
+Login: admin@gmail.com
+password: 12345678
+method: post
+
+
+3.user register credentials
+======
+Api: http://127.0.0.1:8000/api/auth/register
+method: post
+
+Feild Item:
+name,
+email,
+password
+
+
+4.user logout credentials
+======
+Api: http://127.0.0.1:8000/api/auth/logout
+method: post
+
+Feild Item:
+Bearer Token,
+
+5. Product create credentials
+======
+Api: http://127.0.0.1:8000/api/product/create
+method: post
+
+Feild Item:
+Bearer Token,
+name,
+price,
+stock
+
+
+6. Product view credentials
+======
+Api: http://127.0.0.1:8000/api/product/view
+method: get
+
+Feild Item:
+Bearer Token,
+
+7. Product edit credentials
+======
+Api: http://127.0.0.1:8000/api/product/edit/{id}
+method: get
+
+Feild Item:
+Bearer Token,
+url:id
+
+8. Product update credentials
+======
+Api: http://127.0.0.1:8000/api/product/update/{id}
+method: post
+
+Feild Item:
+Bearer Token,
+name,
+price,
+stock
+url:id
+
+
+9. Product soft detete credentials
+======
+Api: http://127.0.0.1:8000/api/product/soft-delete/{id}
+method: get
+
+Feild Item:
+Bearer Token,
+url:id
+
+10. Product trashed lists credentials
+======
+Api: http://127.0.0.1:8000/api/soft-delete-items
+method: get
+
+Feild Item:
+Bearer Token,
+
+11. Product restored credentials
+======
+Api: http://127.0.0.1:8000/api/product/restore/{id}
+method: get
+
+Feild Item:
+Bearer Token,
+url:id
+
+12. Product force deleted credentials
+======
+Api: http://127.0.0.1:8000/api/product/delete/{id}
+method: get
+
+Feild Item:
+Bearer Token,
+url:id
+
+
+13. Product search credentials
+======
+Api: http://127.0.0.1:8000/api/product/{name}
+method: get
+
+Feild Item:
+Bearer Token,
+url: product name
+
+14. Product paginate credentials
+======
+Api: http://127.0.0.1:8000/api/product/paginate?paginate={page number}
+method: post
+
+Feild Item:
+Bearer Token,
+url:page number
+
+
+
+
+
+
+
+
+
